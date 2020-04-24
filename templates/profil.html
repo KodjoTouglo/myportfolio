@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Michel Touglo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+  <link rel="stylesheet" href="{% static "css/responsive.css" %}"/>
+</head>
+<body>
+
+  <!-- Start Header -->
+   <header>
+   	  <div class="container">
+   	  	  <div class="logo">
+   	  	  	  <a href="">McTech</a>
+   	  	  </div>
+   	  	  <div class="trigger-main">
+   	  	  	 <a href="javascript:void(0);" class="ham-burger">
+   	  	  	 	 <span></span>
+   	  	  	 	 <span></span>
+   	  	  	 </a>
+   	  	  </div>
+   	  	  <div class="navbar">
+   	  	  	  <ul>
+   	  	  	  	<li><a href="#home" class="active">Accueil</a></li>
+   	  	  	  	<li><a href="#about">A propos</a></li>
+   	  	  	  	<li><a href="#services">Services</a></li>
+   	  	  	  	<li><a href="#portfolio">Portfolio</a></li>
+   	  	  	  	<li><a href="#contact">Contact</a></li>
+   	  	  	  </ul>
+   	  	  </div>
+   	  </div>
+   </header>
+  <!-- End Header -->
+
+  <!-- Start Home -->
+    <section class="home" id="home">
+       <div class="container">
+       	   <div class="home-text">
+       	   	     <h1>Bonjour, je suis Michel Touglo</h1>
+       	   	     <h3>Informaticien Sécurité Réseau</h3>
+       	   </div>
+       </div>
+    </section>
+  <!-- End Home -->
+ 
+  <!-- Start About -->
+    <section class="about" id="about">
+       <div class="container">
+       	  <h2 class="title">Me Concernant</h2>
+       	  <div class="about-content">
+       	  	  <div class="img">
+       	  	  	 <img src="{% static "img/about-me.jpg" %}" alt="me">
+       	  	  </div>
+       	  	  <div class="description">
+       	  	  	  <h4>Bonjour, je m'appelle Michel Touglo</h4>
+       	  	  	  <h5>Administrateur Sécurité Réseau</h5>
+       	  	  	  <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+       	  	  	  <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+       	  	  	  <p>
+       	  	  	  	<a  href="{% static "doc/CV.pdf" %}"><button type="button" class="btn-bg">Télécharger CV</button></a>
+       	  	  	  </p>
+       	  	  </div>
+       	  </div>
+       </div>
+    </section>
+  <!-- End About -->
+
+  <!-- Start Service -->
+    <section class="services" id="services">
+    	<div class="container">
+    		 <h2 class="title">Services</h2>
+    		 <div class="services-content">
+				{% for service in service.all %}
+    		 	 <div class="card">
+    		 	 	  <div class="box">
+    		 	 	  	  <div class="icon">
+    		 	 	  	  	 <span class="fa fa-folder"></span>
+    		 	 	  	  </div>
+    		 	 	  	  <h3>{{ service.name }}</h3>
+    		 	 	  	  <p>{{ service.description }}</p>
+    		 	 	  </div>
+    		 	 </div>
+				{% endfor %}	
+    		 </div>
+    	</div>
+    </section>
+ <!-- End Service -->
+
+
+
+ <!-- Start Portfolio -->
+    <section class="portfolio" id="portfolio">
+    	<div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h2 class="title">Travaux Récents</h2>
+                </div>
+            </div>
+            <div class="row slider">
+                <div class="portfolio-gallery">
+                    <div class="item" data-id="branding">
+                        <div class="inner">
+							<div class="gallery">
+                            <img src="{% static "img/headerImg.jpg" %}"  alt="portfolio"/>
+							</div>
+                            <div class="overlay">
+                                <span class="fa fa-plus"></span>
+                                <h4>Brandig</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="item" data-id="branding">
+                        <div class="inner">
+							<div class="gallery">
+                            <img src="{% static "img/blog3.jpg" %}"  alt="portfolio"/>
+							</div>
+                            <div class="overlay">
+                                <span class="fa fa-plus"></span>
+                                <h4>Brandig</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="item" data-id="branding">
+                        <div class="inner">
+							<div class="gallery">
+                            <img src="{% static "img/about-me.jpg" %}"  alt="portfolio"/>
+							</div>
+                            <div class="overlay">
+                                <span class="fa fa-plus"></span>
+                                <h4>Brandig</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="item" data-id="branding">
+                        <div class="inner">
+							<div class="gallery">
+                            <img src="{% static "img/team2.jpg" %}"  alt="portfolio"/>
+							</div>
+                            <div class="overlay">
+                                <span class="fa fa-plus"></span>
+                                <h4>Brandig</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="item" data-id="branding">
+                        <div class="inner">
+							<div class="gallery">
+                            <img src="{% static "img/blog1.jpg" %}"  alt="portfolio"/>
+							</div>
+                            <div class="overlay">
+                                <span class="fa fa-plus"></span>
+                                <h4>Brandig</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="item" data-id="branding">
+                        <div class="inner">
+							<div class="gallery">
+                            <img src="{% static "img/team1.jpg" %}"  alt="portfolio"/>
+							</div>
+                            <div class="overlay">
+                                <span class="fa fa-plus"></span>
+                                <h4 class="get">Brandig</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- End Portfolio -->
+ 
+
+<!--Afficher popup gallery-->
+<div class="lightbox hide">
+    <span class="close-lightbox fa fa-close"></span>
+    <img onclick="next()" src="{% static "img/headerImg.jpg" %}" alt="portfolio"/>
+	
+	<!--Slide Image-->
+	<div class="prev-slide" onclick="prev()"> < </div>
+	<div class="next-slide" onclick="next()"> > </div>
+<!--Fin image slide-->
+</div>
+<!--Fin popup gallery-->
+
+
+
+
+<!-- Start Contact -->
+   <section class="contact" id="contact">
+   	 <div class="container">
+   	 	  <h2 class="title">Contactez-Nous</h2>
+   	 	  <div class="contact-content">
+   	 	  	  <form id="contact-form" method="POST">
+					 {% csrf_token %}
+   	 	  	  	<input type="text" name="nom" id="nom" placeholder="Nom" required/>
+   	 	  	  	<input type="email" name="email" id='email' placeholder="E-mail" required/>
+                
+                {% if messages %} 
+                <div class="flash-message">   
+					<div class="alert">
+						<ul class="messages">
+							<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+							{% for message in messages %}
+							<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+                </div>
+                {% endif %}
+
+   	 	  	  	<input type="text" name="objet" id="objet" placeholder="Objet" required/>
+   	 	  	  	<textarea  name="message" id="message" placeholder="Message" required></textarea>
+   	 	  	  	<button type='submit'value='Envoyer' class="btn-light">Envoyer</button>
+   	 	  	  </form>
+   	 	  </div>
+   	 </div>
+   </section>
+ <!-- End Contact -->
+ 
+ 
+ <!-- Start Footer -->
+   <footer>
+   	  <div class="container">
+   	  	  <div class="footer-content">
+   	  	  	  <div class="box">
+   	  	  	  	  <div class="icon">
+   	  	  	  	  	 <span class="fa fa-phone"></span>
+   	  	  	  	  </div>
+   	  	  	  	  <h4>Téléphone</h4>
+   	  	  	  	  <p>+228 93195880</p>
+   	  	  	  </div>
+   	  	  	  <div class="box">
+   	  	  	  	  <div class="icon">
+   	  	  	  	  	 <span class="fa fa-envelope"></span>
+   	  	  	  	  </div>
+   	  	  	  	  <h4>Email</h4>
+   	  	  	  	  <p>mctech@gmail.com</p>
+   	  	  	  </div>
+   	  	  	  <div class="box">
+   	  	  	  	  <div class="icon">
+   	  	  	  	  	 <span class="fa fa-map-marker"></span>
+   	  	  	  	  </div>
+   	  	  	  	  <h4>Lieu</h4>
+   	  	  	  	  <p>Agoè-Téléssou, Lomé-TOGO</p>
+   	  	  	  </div>
+   	  	  </div>
+   	  	  <div class="social-links">
+   	  	  	 <ul>
+   	  	  	 	 <li><a href=""><span class="fa fa-linkedin"></span></a></li>
+   	  	  	 	 <li><a href=""><span class="fa fa-github"></span></a></li>
+   	  	  	 </ul>
+   	  	  </div>
+   	  </div>
+   </footer>
+ <!-- End Footer -->
+
+<!--copyright-->
+<section class="copyright">
+    <div class="container">
+        <p>©️ Copyright {% now 'Y' %}</p>
+    </div>
+</section>
+<!--Fin copyright-->
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type:"text/javascript" src="{% static "js/contact.js" %}"></script>
+<script src="{% static "js/portfolio.js" %}"></script>
+<script src="{% static "js/navbar.js" %}"></script>
+
+</body>
+</html>
+
+
+
+
+

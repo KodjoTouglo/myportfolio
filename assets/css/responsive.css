@@ -1,0 +1,92 @@
+
+
+@media(max-width: 991px){
+	.trigger-main{
+		display: block;
+	}
+	header .container{
+		position: relative;
+	}
+    .container{
+    	max-width: 750px;
+    }
+    .services .services-content .card .box h3{
+    	min-height:50px;
+    }
+
+    header{
+    	position: fixed;
+    	background-color: black;
+    }
+
+    header .navbar{
+    	position: fixed;
+    	top:0;
+    	right:0;
+    	bottom:0;
+    	width:180px;
+    	background-color: #222222;
+    	z-index:200;
+    	padding-top:80px;
+    	-webkit-transform: translateX(100%);
+    	transform: translateX(100%);
+    	transition: transform .5s ease;
+    	-webkit-transition: -webkit-transform .5s ease;
+    }
+    header .navbar.open{
+    	-webkit-transform: translateX(0);
+    	transform: translateX(0);
+    }
+    header .navbar ul li{
+    	display: block;
+    }
+}
+
+
+
+@media(max-width: 767px){
+
+    .home .home-text h3{
+            font-size:40px;
+        }
+        .home .home-text{
+            left:0;
+            padding:0px 15px;
+        }
+    
+        .about .about-content .img{
+            width: 100%;
+        }
+        .about .about-content .description{
+            width: 100%;
+        }
+        .services .services-content .card{
+            width: 50%;
+        }
+    
+        .portfolio .portfolio-gallery .item {
+            flex: 0 0 100%;
+            max-width:100%;
+            position: relative;
+            padding: 8px;
+        }
+
+    }
+    
+    
+    
+    @media(max-width: 500px){
+        .services .services-content .card{
+            width: 100%;
+        }	
+        .services .services-content .card .box h3{
+            min-height: auto;
+        }
+        .portfolio .portfolio-gallery .item {
+            flex: 0 0 100%;
+            max-width:100%;
+        }
+        footer .footer-content .box{
+            width: 100%;
+        }
+    }
