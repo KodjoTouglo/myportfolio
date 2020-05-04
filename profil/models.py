@@ -4,7 +4,8 @@ class Service(models.Model):
     name = models.CharField(max_length=150)
     description = models.TextField(max_length=350)
 
-
+class About_me(models.Model):
+    biographie = models.TextField(max_length=1000)
 
 class Contact(models.Model):
     nom = models.CharField(max_length=150, blank=True, null=True)

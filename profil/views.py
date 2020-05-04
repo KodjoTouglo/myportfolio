@@ -1,13 +1,15 @@
 from django.shortcuts import render
-from profil.models import Contact, Service
+from profil.models import Contact, Service, About_me
 from django.contrib import messages
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 
 def profil(request):
     service = Service.objects
+    about_me = About_me.objects
     context = {
-        'service': service
+        'service': service,
+        'about_me': about_me
     }
     if request.method == 'POST':
         nom = request.POST['nom']

@@ -58,12 +58,9 @@
        	  	  	  <h4>Bonjour, je m'appelle Michel Touglo</h4>
        	  	  	  <h5>Administrateur Sécurité Réseau</h5>
 
-       	  	  	  <p>Je suis un optimiste passionné d'informatique, un apprenant ambitieux, un administrateur intuitif et passionnément
-						  curieux, en plein essor pour avoir un impact sur le monde. Actuellement, j'étends mes connaissances sur la programmation informatique (Python, Javascript, Ruby) et le domaine de la cybersécurité.
-						  Apparemment, j'explore également les domaines de l'intelligence artificielle et la data science, me permettant de les appliquer dans des projets. En dehors de tout cela, j'aime la programmation Web (Django). Je suis toujours ouvert à l'aide et aux suggestions alors n'hésitez pas 
-						  à me contacter à tout moment.
-				  </p>
-       	  	  	  
+				{% for about_me in about_me.all %}
+       	  	  	  <p>{{ about_me.biographie }}</p>
+       	  	  	{% endfor %} 
        	  	  	  <p>
        	  	  	  	<a  href="{% static "doc/CV.pdf" %}"><button type="button" class="btn-bg">Télécharger CV</button></a>
        	  	  	  </p>
@@ -249,7 +246,7 @@
    	  	  	  	  	 <span class="fa fa-envelope"></span>
    	  	  	  	  </div>
    	  	  	  	  <h4>Email</h4>
-   	  	  	  	  <p>mctech@gmail.com</p>
+   	  	  	  	  <p>mctgtech@gmail.com</p>
    	  	  	  </div>
    	  	  	  <div class="box">
    	  	  	  	  <div class="icon">
